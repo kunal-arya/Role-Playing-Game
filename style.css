@@ -1,0 +1,150 @@
+
+@font-face {
+    font-family: 'medieval_sharpbook';
+    src: url('./font/medievalsharp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'medieval_sharpbook', cursive;
+    margin: 0;
+    background: rgb(51,43,55);
+    background: radial-gradient(circle, rgba(51,43,55,1) 0%, rgba(51,43,55,1) 100%);
+    text-align: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+}
+
+.character-card {
+    width: 230px;
+    height: 14rem;
+    margin-bottom: 1em;
+    background: #231d24;
+    border-radius: 14px;
+    border: 0.2rem solid #000721;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.1),
+    0px 0px 10px rgba(255, 255, 255, 0.1);
+    padding: 0.75em;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    position: relative;
+}
+
+.name {
+    margin:0.25em 0;
+    width: 100%;
+    letter-spacing: 0.08rem;
+    font-size: 90%;
+}
+
+.avatar {
+    border: 3px solid #000721;
+    opacity: 0.8;
+    width: 15vh;
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 7, 33, 0.8);
+}
+
+.health {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.health span {
+    font-weight: bold;
+}
+
+.dice-container {
+    background-color: #000721;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.dice {
+    background-color: #fff;
+    color: #000721;
+    padding: 0.25em 0.5em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.btn {
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: 'medieval_sharpbook', cursive;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #fcc02a;
+    border: 2px solid #963404;
+    color: #963404;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.1);
+}
+
+
+/* ===============
+   Media Queries
+   =============== */
+
+   @media (min-width: 550px) {
+    main {
+        flex-direction: row;
+    }
+
+    .character-card {
+        height: 50vh;
+        margin-right: 1em;
+    }
+
+    .name {
+        font-size: 120%;
+    }
+
+    .avatar {
+        width: 20vh;
+    }
+
+    .health {
+        font-size: 1.4rem;
+    }
+
+    .dice-container {
+        height: 30%;
+    }
+
+    .dice {
+        font-size: 150%;
+    }
+   }

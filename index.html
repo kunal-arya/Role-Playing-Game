@@ -12,16 +12,31 @@
     <main>
         <div id="hero">
             <div class="character-card">
-            <h4 class="name">wizard</h4>
+            <h4 class="name">Wizard</h4>
             <img class="avatar" src="./images/wizard.png" alt="hero Image" />
             <div class="health"> health: <span>60</span></div>
+            <div class="dice-container">
+                <div class="dice">6</div>
+                <div class="dice">7</div>
+                <div class="dice">8</div>
+            </div>
             </div>
         </div>
-        <div id="monster"> </div>
+        <div id="monster"> 
+            <div class="character-card">
+                <h4 class="name">Orc</h4>
+                <img class="avatar" src="./images/orc.png" alt="monster Image" />
+                <div class="health"> health: <span>10</span></div>
+                <div class="dice-container">
+                    <div class="dice">8</div>
+                </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <section id="actions">
-        <button id="attack-button">Attack</button>
+        <button class="btn btn-primary" id="attack-button">Attack</button>
     </section>
 </body>
 </html>
