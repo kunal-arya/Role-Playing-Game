@@ -1,13 +1,6 @@
 
 import charData from "./Js/data.js";
 import {Character} from "./Js/Character.js";
-// to generate random dice possibilties
-function getDiceRollArray(diceCount) {
-    return new Array(diceCount).fill(0).map( () => {
-        return Math.floor(Math.random() * 6) + 1;
-    })
-}
-
 
 
 function render() {
