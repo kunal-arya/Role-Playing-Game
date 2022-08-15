@@ -29,7 +29,7 @@ img {
 
 .character-card {
     width: 230px;
-    height: 14rem;
+    height: 16rem;
     margin-bottom: 1em;
     background: #231d24;
     border-radius: 14px;
@@ -64,10 +64,26 @@ img {
     margin: 0;
     padding: 0;
     font-size: 1.1rem;
+    color:#ccc;
 }
 
-.health span {
-    font-weight: bold;
+.health .b {
+    font-size: 700;
+}
+
+.health-bar-outer {
+    width: 90%;
+    background-color: #171217;
+    height: 1vh;
+    border-radius: 2px;
+    margin: 10px 2%;
+}
+
+.health-bar-inner {
+    background-color: #466d34;
+    width: 100%;
+    border-radius: 2px;
+    height: 1vh;
 }
 
 .dice-container{
@@ -137,7 +153,6 @@ img {
     text-align: center;
 }
 
-
 /* ===============
    Media Queries
    =============== */
@@ -170,5 +185,13 @@ img {
 
     .dice {
         font-size: 150%;
+    }
+
+    .end-game {
+        margin-top: 10%;
+    }
+
+    .health-bar-outer {
+        margin: 25px 2%;
     }
    }

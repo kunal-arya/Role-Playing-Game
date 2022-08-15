@@ -10,4 +10,6 @@ function getDicePlaceholderHtml(diceCount) {
     } ).join("");
 }
 
-export {getDiceRollArray, getDicePlaceholderHtml}
+let getPercentage = (max,change) => (change/max) * 100;
+
+export {getDiceRollArray, getDicePlaceholderHtml,getPercentage};

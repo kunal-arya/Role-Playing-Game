@@ -1,4 +1,4 @@
-import {getDiceRollArray, getDicePlaceholderHtml} from "./utils.js";
+import {getDiceRollArray, getDicePlaceholderHtml, getPercentage} from "./utils.js";
 
 function Character(data){
     Object.assign(this,data);
@@ -21,13 +21,22 @@ function Character(data){
         }
     }
 
+    this.gethealthbar = () => {
+        let percent = getPercentage(this.maxHealth,this.health);
+       return `<div class="health-bar-outer">
+                    <div class="health-bar-inner" style = "width: ${percent}%"> 
+                    </div>
+               </div> `
+    }
+
     this.getCharacterhtml = function(){
         const { name , avatar , health , diceCounts, diceHtml } = this;
         return `
         <div class="character-card">
             <h4 class="name"> ${name} </h4>
             <img class="avatar" src= ${avatar}  alt="hero Image" />
-            <div class="health"> health: <span> ${health} </span></div>
+            <div class="health"> health: <span class="b"> ${health} </span></div>
+            ${this.gethealthbar()}
             <div class="dice-container">
             ${diceHtml}
             </div>
