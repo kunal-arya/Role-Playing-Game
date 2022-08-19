@@ -12,6 +12,7 @@ function Character(data){
         .join("");
     };
 
+    console.log(this.diceCounts);
     this.takeDamage = (opponentDiceScore) => {
         let damage = opponentDiceScore.reduce((sum,item) => sum + item);
         this.health -= damage;
@@ -23,14 +24,15 @@ function Character(data){
 
     this.gethealthbar = () => {
         let percent = getPercentage(this.maxHealth,this.health);
+        console.log(percent);
        return `<div class="health-bar-outer">
-                    <div class="health-bar-inner ${(percent <= 25) ? "danger" : ""}"  style = "width: ${percent}%"> 
+                    <div class="health-bar-inner ${percent < 26 ? "danger" : ""}"  style = "width: ${percent}%"> 
                     </div>
                </div> `
     }
 
     this.getCharacterhtml = function(){
-        const { name , avatar , health , diceCounts, diceHtml } = this;
+        const { name , avatar , health , diceHtml } = this;
         return `
         <div class="character-card">
             <h4 class="name"> ${name} </h4>
