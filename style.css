@@ -86,6 +86,10 @@ img {
     height: 1vh;
 }
 
+.danger {
+    background:#d1435f;
+}
+
 .dice-container{
     background-color: #000721;
     width: 100%;

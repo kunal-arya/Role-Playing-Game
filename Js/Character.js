@@ -24,7 +24,7 @@ function Character(data){
     this.gethealthbar = () => {
         let percent = getPercentage(this.maxHealth,this.health);
        return `<div class="health-bar-outer">
-                    <div class="health-bar-inner" style = "width: ${percent}%"> 
+                    <div class="health-bar-inner ${(percent <= 25) ? "danger" : ""}"  style = "width: ${percent}%"> 
                     </div>
                </div> `
     }
