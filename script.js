@@ -20,9 +20,13 @@ function attack() {
         endGame();
     } else {
         if(monster.dead) {
+            document.getElementById("attack-button").style.display = "none";
             if(monstersArray.length > 0){
-                monster = getNewMonster();
-                render();
+                setTimeout(() => {
+                    monster = getNewMonster();
+                    render();
+                    document.getElementById("attack-button").style.display = "initial";
+                },1000);
             } else {
                 endGame();
             }
@@ -38,13 +42,16 @@ function endGame() {
 
     const endEmoji = (!wizard.dead) ? "🔮" : "☠️";
 
-    document.querySelector("body").innerHTML = `
+    setTimeout(() => {
+        document.querySelector("body").innerHTML = `
         <div class="end-game">
             <h2>Game Over</h2> 
             <h3>${endMessage}</h3>
             <p class="end-emoji">${endEmoji}</p>
         </div>
     `
+    },1500);
+
 }
 
 function render() {
